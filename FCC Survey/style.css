@@ -1,0 +1,65 @@
+body {
+  text-align: center;
+}
+#description {
+  background-color: "";
+}
+#survey-form {
+  background-color: "";
+
+  }
+.row-tab {
+  display:block;
+}
+.name {
+  display:inline-block;
+  width: 40%;
+  text-align: right;
+}
+.input-name {
+  display:inline-block;
+  width: 48%;
+  text-align:left;
+}
+.email {
+  display:inline-block;
+  width: 40%;
+  text-align: right;
+}
+.input-email {
+  display:inline-block;
+  width: 48%;
+  text-align:left;
+}
+.age {
+  display:inline-block;
+  width: 40%;
+  text-align: right;
+}
+.input-age {
+  display:inline-block;
+  width: 48%;
+  text-align:left;
+}
+.label-meat {
+  display:inline-block;
+  width: 40%;
+  text-align: right;
+}
+.meat-input {
+  display:inline-block;
+  width: 48%;
+  text-align:left;
+}
+.label-wrappings {
+ display:center;
+  width: ;
+  text-align: ; 
+}
+.input-radio {
+ display:inline-block;
+}
+.checkbox-label {
+  display:inline-block;
+  
+}
