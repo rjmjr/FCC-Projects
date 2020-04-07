@@ -1,0 +1,250 @@
+<div class='main-body'>
+
+  <nav id="navbar">
+    <header>
+      CSS Documentation
+    </header>
+    <a href="#Introduction" class="nav-link">Introduction</a>
+    <a href="#Syntax" class="nav-link">Syntax</a>
+    <a href="#Keyword" class="nav-link">Keyword</a>
+    <a href="#Selector" class="nav-link">Selector</a>
+    <a href="#Concepts" class="nav-link">Concepts</a>
+  </nav>
+
+  <main id="main-doc">
+    <section class="main-section" id='Introduction'>
+      <header>
+        Introduction
+      </header>
+      <p>Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.</p>
+      <p>CSS is one of the core languages of the open Web and is standardized across Web browsers according to the W3C specification. Developed in levels, CSS1 is now obsolete, CSS2.1 is a recommendation, and CSS3, now split into smaller modules, is progressing on the standardization track.</p>
+      <p>CSS key concepts:</p>
+
+      <ul>
+    <li>The syntax and forms of the language</li>
+    <li>Specificity, inheritance and the Cascade</li>
+    <li>CSS units and values</li>
+    <li>Box model and margin collapse</li>
+    <li>The containing block</li>
+    <li>Stacking and block-formatting contexts</li>
+    <li>Initial, computed, used, and actual values</li>
+    <li>CSS shorthand properties</li>
+    <li>CSS Flexible Box Layout</li>
+    <li>CSS Grid Layout</li>
+    <li>Media queries</li>
+    <li>Animation</li>
+      </ul>
+    </section>
+    <section class="main-section" id='Syntax'>
+      <header>
+        Syntax
+      </header>
+      <p>The property which is an identifier, that is a human-readable name, that defines which feature is considered.</p>
+    <p>The value which describe how the feature must be handled by the engine. Each property has a set of valid values, defined by a formal grammar, as well as a semantic meaning, implemented by the browser engine.</p>
+      <code>selectorlist {
+  property: value;
+  [more property:value; pairs]
+}
+<br>
+... where selectorlist is: selector[:pseudo-class] [::pseudo-element] [, more selectorlists]</code>
+      <ul>
+        <li>The <b>selector</b> points to the HTML element you want to style.</li>
+
+        <li>The <b>declaration</b> block contains one or more declarations <i>separated by semicolons</i>.</li>
+
+        <li>Each declaration includes a CSS <i>property name and a value, separated by a colon</i>.</li>
+
+        <li>A CSS declaration <i>always ends with a semicolon</i>, and declaration blocks are surrounded by curly braces.</li>
+      </ul>
+      <ul>
+    <li>Type selector <b><i>elementname</i></b></li>
+    <li>Class selector <b><i>.classname</i></b></li>
+    <li>ID selector <b><i>#idname</i></b></li>
+    <li>Universal selector <b><i>*, ns|*, *|*, |*</i></b></li>
+    <li>Attribute selector <b><i>[attr=value]</i></b></li>
+	</ul>
+    </section>
+    <section class="main-section" id='Keyword'>
+      <header>
+        Keyword
+      </header>
+      <p>Examples of CSS standard names:</p>
+<table>
+  <tr>
+    <th>Keyword</th>
+    <th>Description</th>
+    
+  </tr>
+
+<tr>
+<td>align-content</td> 	
+<td>Specifies the alignment between the lines inside a flexible container when the items do not use all available space</td>
+</tr>
+
+<tr>
+<td>align-items</td> 	
+<td>Specifies the alignment for items inside a flexible container</td>
+</tr>
+
+<tr>
+<td>align-self</td> 	
+<td>Specifies the alignment for selected items inside a flexible container</td>
+</tr>
+
+<tr>
+<td>all</td> 	
+<td>Resets all properties (except unicode-bidi and direction)</td>
+</tr>
+
+<tr>
+<td>animation</td> 	
+<td>A shorthand property for all the animation-* properties</td>
+</tr>
+<tr>
+<td> </td> 	
+<td> </td>
+</tr>
+
+<tr>
+<td>background</td> 	
+<td>A shorthand property for all the background-* properties</td>
+</tr>
+
+<tr>
+<td>background-attachment 	</td>
+<td>Sets whether a background image scrolls with the rest of the page, or is fixed</td>
+</tr>
+
+<tr>
+<td>background-blend-mode 	</td>
+<td>Specifies the blending mode of each background layer (color/image)</td>
+</tr>
+
+<tr>
+<td>background-clip 	</td>
+<td>Defines how far the background (color or image) should extend within an element</td>
+</tr>
+
+<tr>
+<td>background-color 	</td>
+<td>Specifies the background color of an element</td>
+</tr>
+
+<tr>
+<td>background-image 	</td>
+<td>Specifies one or more background images for an element</td>
+</tr>
+
+<tr>
+<td>background-origin 	</td>
+<td>Specifies the origin position of a background image</td>
+</tr>
+
+<tr>
+<td>background-position 	</td>
+<td>Specifies the position of a background image</td>
+</tr>
+
+<tr>
+<td>background-repeat 	</td>
+<td>Sets if/how a background image will be repeated</td>
+</tr>
+
+<tr>
+<td>background-size 	</td>
+<td>Specifies the size of the background images</td>
+</tr>
+
+</table>
+
+     
+    </section>
+    <section class="main-section" id='Selector'>
+      <header>
+        Selector
+      </header>
+      <p>A CSS selector is the first part of a CSS Rule. It is a pattern of elements and other terms that tell the browser which HTML elements should be selected to have the CSS property values inside the rule applied to them. The element or elements which are selected by the selector are referred to as the <i>subject of the selector</i>.</p>
+      <code><b>h1</b> { 
+  color: blue;
+        background-color: yellow;
+} <br>
+        <b>p</b> {
+        color: red;
+        }
+</code>
+      <p>There are selectors that target the document in different ways — for example by selecting an element such as <b> <i>h1</b> </i>, or a class such as <b> <i>.special</b> </i>.</p>
+      <code><b>h1</b> { 
+  color: blue; 
+} 
+<br>
+        <b>.special</b> { 
+  color: blue; 
+}</code>
+      <p>Can also combine these into a selector list, by adding a comma between them.</p>
+      <code><b>h1, .special</b> { 
+  color: blue; 
+}
+      </code>
+      
+      <p>White space is valid before or after the comma. You may also find the selectors more readable if each is on a new line.</p>
+
+      <code><b>h1</b>,<br><b> 
+      .special</b> {<br>
+  color: blue; 
+} 
+      </code>
+    </section>
+
+    <section class="main-section" id='Concepts'>
+      <header>
+        Concepts
+      </header>
+      
+<p>Syntax and semantics</p>
+<UL>
+
+    <li>CSS syntax</li>
+    <li>At-rules</li>
+    <li>Cascade</li>
+    <li>Comments</li>
+    <li>Descriptor</li>
+    <li>Inheritance</li>
+    <li>Shorthand properties</li>
+    <li>Specificity</li>
+    <li>Value definition syntax</li>
+</UL>
+<p>Values</p>
+<UL>
+    <li>Actual value</li>
+    <li>Computed value</li>
+    <li>Initial value</li>
+    <li>Resolved value</li>
+    <li>Specified value</li>
+    <li>Used value</li>
+</UL>
+<p>Layout</p>
+<UL>
+    <li>Block formatting context</li>
+    <li>Box model</li>
+    <li>Containing block</li>
+    <li>Layout mode</li>
+    <li>Margin collapsing</li>
+    <li>Replaced elements</li>
+    <li>Stacking context</li>
+    <li>Visual formatting model</li>
+</UL>
+      
+    </section>
+  </main>
+</div>
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
